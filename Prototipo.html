@@ -1,615 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protótipo de Wireframe</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Estilo para o conteiner 1 */
-        .container1 {
-            background-color: #d6d5d5;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilo para a imagem de logomarca */
-        .logo {
-            max-width: 100%;
-            height: auto;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        /* Estilo para o título e subtitulo */
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo para o formulário de cadastro horizontal */
-        .form-horizontal {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .form-group {
-            flex-basis: calc(33.33% - 10px);
-            margin-right: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group:last-child {
-            margin-right: 0;
-        }
-
-        /* Estilo para os campos de formulário */
-        .form-control {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #333;
-            border-radius: 5px;
-        }
-
-        /* Estilo para o botão "Enviar" */
-        .btn-dark {
-            background-color: #333;
-            color: #f2f2f2;
-            border: none;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        /* Estilo para alinhar o botão "Enviar" aos campos do formulário */
-        .form-group-button {
-            flex-basis: calc(33.33% - 10px);
-            margin-right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        /* Estilo para os links no rodapé */
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-between;
-            text-align: justify;
-        }
-
-        .footer-links li {
-            margin-right: 10px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* Estilo para o conteiner 2 */
-        .container2 {
-            background-color: #f5f5f5;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilo para o título do conteiner 2 */
-        .container2 .title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo para as linhas do conteiner 2 */
-        .row-container2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        /* Estilo para cada item do conteiner 2 */
-        .item-container2 {
-            flex-basis: calc(33.33% - 10px);
-            margin-right: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            text-align: left;
-        }
-
-        /* Estilo para o ícone do conteiner 2 */
-        .icon-container2 {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        /* Estilo para o título e subtitulo do conteiner 2 */
-        .text-container2 {
-            text-align: left;
-            font-size: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Estilo para o conteiner 3 */
-        .container3 {
-            background-color: #d6d5d5;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Estilo para a coluna da esquerda do conteiner 3 */
-        .container3 .column-left {
-            flex-basis: 50%;
-            text-align: left;
-        }
-
-        /* Estilo para o título da coluna da esquerda */
-        .container3 .column-left .title {
-            font-size: 24px;
-            font-weight: bold;
-            padding: 0 30px;
-        }
-
-        /* Estilo para o texto da coluna da esquerda */
-        .container3 .column-left p {
-            font-size: 12px;
-            padding: 0 30px;
-        }
-
-        /* Estilo para a coluna da direita do conteiner 3 */
-        .container3 .column-right {
-            flex-basis: 50%;
-        }
-
-        /* Estilo para a imagem da coluna da direita */
-        .container3 .column-right img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Estilo para o conteiner 4 */
-        .container4 {
-            background-color: #f2f2f2;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Estilo para a coluna da esquerda do conteiner 4 */
-        .container4 .column-left {
-            flex-basis: 50%;
-            text-align: left;
-        }
-
-        /* Estilo para o vídeo da coluna da esquerda */
-        .container4 .column-left video {
-            width: 100%;
-        }
-
-        /* Estilo para a coluna da direita do conteiner 4 */
-        .container4 .column-right {
-            flex-basis: 50%;
-            text-align: left;
-        }
-
-        /* Estilo para o título da coluna da direita */
-        .container4 .column-right .title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left;
-            padding: 0 30px;
-            margin-bottom: 10px;
-        }
-
-        /* Estilo para o texto da coluna da direita */
-        .container4 .column-right p {
-            font-size: 12px;
-            padding: 0 30px;
-            text-align: left;
-        }
-
-        /* Estilo para o conteiner 5 */
-        .container5 {
-            background-color: #d6d5d5; /* Cor de fundo cinza mais claro */
-            color: #333; /* Fontes em cinza escuro */
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilo para o título h1 */
-        .container5 h1 {
-            font-size: 32px; /* Tamanho do título */
-            font-weight: bold;
-        }
-
-        /* Estilo para o texto */
-        .container5 p {
-            font-size: 20px; /* Tamanho do texto */
-        }
-
-        /* Estilo para o título e subtitulo centralizados */
-        .container5 .sub-title {
-            font-size: 24px; /* Tamanho do subtítulo */
-            font-weight: bold;
-        }
-
-        /* Estilo para as imagens lado a lado */
-        .container5 .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container5 .image-container img {
-            width: 80px; /* Tamanho das imagens */
-            height: 80px; /* Tamanho das imagens */
-            margin: 0 20px; /* Distância entre as imagens */
-            border-radius: 50%; /* Imagens arredondadas */
-        }
-         /* Estilo para o conteiner 6 */
-         .container1 {
-            background-color: #f2f2f2;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilo para a imagem de logomarca */
-        .logo {
-            max-width: 100%;
-            height: auto;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-
-        /* Estilo para o título e subtitulo */
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo para o formulário de cadastro horizontal */
-        .form-horizontal {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .form-group {
-            flex-basis: calc(33.33% - 10px);
-            margin-right: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group:last-child {
-            margin-right: 0;
-        }
-
-        /* Estilo para os campos de formulário */
-        .form-control {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #333;
-            border-radius: 5px;
-        }
-
-        /* Estilo para o botão "Enviar" */
-        .btn-dark {
-            background-color: #333;
-            color: #f2f2f2;
-            border: none;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        /* Estilo para alinhar o botão "Enviar" aos campos do formulário */
-        .form-group-button {
-            flex-basis: calc(33.33% - 10px);
-            margin-right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        /* Estilo para os links no rodapé */
-        .footer {
-            list-style: none;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            text-align: justify;
-        }
-
-        /* Estilo para o conteiner 7 */
-        .container7 {
-            background-color: #d6d5d5;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilo para a imagem de logomarca no conteiner 7 */
-        .logo-container7 {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .logo-container7 img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        /* Estilo para o texto de direitos autorais no conteiner 7 */
-        .copyright-text {
-            font-size: 12px;
-            color: #333;
-            font-family: Arial, sans-serif;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container1">
+    <div class="bloco1 ">
         <!-- Conteúdo Recursivo 1 - Logomarca, Título e Subtítulo -->
         <div class="content-recursive">
             <!-- Logomarca -->
-            <img src="./img/Rhapsody_Dragão.jpg" alt="Logomarca" class="logo">
+
+            <img style="max-width: 50%; height: auto;"src="https://i.imgur.com/HOK6Xao.png" fetchpriority="high">
+
             <!-- Título e Subtítulo -->
-            <div class="title">O melhor do Mundo!</div>
-            <div class="subtitle">Se inscreva para novidades</div>
+            <div class="titulo1"></div>
+            <div class="subtitulo1">O paceiro ideal para monitorar seu consumo</div>
         </div>
-
-        <!-- Conteúdo Recursivo 2 - Formulário de Cadastro -->
-        <div class="content-recursive">
-            <div class="row">
-                <!-- Coluna 1 - Formulário de Nome -->
-                <div class="col-md-4 form-group">
-                    <input type="text" class="form-control" placeholder="Nome">
-                </div>
-
-                <!-- Coluna 2 - Formulário de Email -->
-                <div class="col-md-4 form-group">
-                    <input type="email" class="form-control" placeholder="Email">
-                </div>
-
-                <!-- Coluna 3 - Botão Enviar -->
-                <div class="col-md-4 form-group-button">
-                    <button type="submit" class="btn btn-dark">Enviar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conteúdo Recursivo 3 - Links no Rodapé -->
-        <div class="content-recursive">
-            <!-- Links no Rodapé -->
-            <ul class="footer-links">
-                <li><a href="#" style="text-decoration: none; color: #333;">GitHub</a></li>
-                <li><a href="#" style="text-decoration: none; color: #333;">Instagram</a></li>
-                <li><a href="#" style="text-decoration: none; color: #333;">YouTube</a></li>
-                <li><a href="#" style="text-decoration: none; color: #333;">LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container2">
-        <!-- Conteúdo Recursivo 1 - Título -->
-        <div class="content-recursive">
-            <div class="title">Por que usar nossa plataforma</div>
-        </div>
-
-        <!-- Conteúdo Recursivo 2 - Linhas e Colunas -->
-        <div class="content-recursive">
-            <div class="row row-container2">
-                <!-- Coluna 1 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 1" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 1</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-
-                <!-- Coluna 2 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 2" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 2</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-
-                <!-- Coluna 3 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 3" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 3</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row row-container2">
-                <!-- Coluna 1 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 1" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 4</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-
-                <!-- Coluna 2 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 2" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 5</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-
-                <!-- Coluna 3 -->
-                <div class="col-md-4 item-container2">
-                    <img src="./img/Rhapsody_Dragão.jpg" alt="Ícone 3" class="icon-container2">
-                    <div class="text-container2">
-                        <div class="title">Motivo 6</div>
-                        <div class="subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore commodi minima.</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Conteiner 3 -->
-    <div class="container3">
-        <!-- Coluna da Esquerda com Título e Texto -->
-        <div class="column-left"><br><br>
-            <div class="title">Quem somos</div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus odit nobis cupiditate eius vel recusandae 
-                praesentium consequuntur nihil quas corporis, sunt debitis ipsum incidunt molestiae blanditiis animi? Laudantium, deleniti! 
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore quis commodi facilis maiores nam ratione dolorem aut 
-                repudiandae soluta consectetur in tempore sunt consequatur, eos voluptatum nobis perspiciatis alias?</p>
-        </div>
-        <!-- Coluna da Direita com Imagem -->
-        <div class="column-right">
-            <img src="./img/Rhapsody_Dragão.jpg" alt="Imagem" class="img-fluid">
-        </div>
-    </div>
-
-    <!-- Conteiner 4 -->
-    <div class="container4">
-        <!-- Coluna da Esquerda com Vídeo -->
-        <div class="column-left">
-            <video controls>
-                <source src="./img/video.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-        </div>
-        <!-- Coluna da Direita com Título e Texto -->
-        <div class="column-right">
-            <div class="title">Título da Coluna</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia quam ut justo euismod, eu mattis quam cursus. Sed hendrerit
-            justo in quam luctus, non hendrerit dui vestibulum. Nullam eleifend, libero eget mattis pharetra, tellus nunc auctor justo, ac
-            semper purus quam a elit. Phasellus sed felis nec orci convallis gravida.</p>
-        </div>
-    </div>
-
-    <!-- Conteiner 5 -->
-    <div class="container5">
-        <!-- Título -->
-        <h1>O que dizem sobre nós</h1>
-        <!-- Texto -->
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia quam ut justo euismod, eu mattis quam cursus. Sed hendrerit
-            justo in quam luctus, non hendrerit dui vestibulum. Nullam eleifend, libero eget mattis pharetra, tellus nunc auctor justo, ac
-            semper purus quam a elit. Phasellus sed felis nec orci convallis gravida."</p>
-        <!-- Título e Subtítulo -->
-        <div class="sub-title">Trabalho 01 - Cad-Desenv_Web_html5_css_javaScript_Php</div>
-        <div class="sub-title">Equipe: Íkaro Viana / Lucas</div>
-        <!-- Imagens lado a lado -->
-        <div class="image-container">
-            <img src="./img/Avatar-1.png" alt="Imagem 1">
-            <img src="./img/Avatar-2.jpg" alt="Imagem 2">
-            <img src="./img/Avatar-3.jpg" alt="Imagem 3">
-            <img src="./img/Avatar-4.jpg" alt="Imagem 4">
-            <img src="./img/Avatar-5.jpg" alt="Imagem 5">
-        </div>
-    </div>
-
-    <!-- Conteiner 6 -->
-    <div class="container6">
-        <!-- Conteúdo Recursivo 6 - Título e Subtítulo -->
-        <div class="content-recursive">
-            <!-- Título e Subtítulo -->
-            <div class="title">Entre em contado</div>
-            <div class="subtitle">Saiba mais sobre nossos produtos, e assine nossa newsletter.</div>
-        </div>
-
-        <!-- Conteúdo Recursivo 7 - Formulário de Cadastro -->
-        <div class="content-recursive">
-            <div class="row">
-                <!-- Coluna 1 - Formulário de Nome -->
-                <div class="col-md-4 form-group">
-                    <input type="text" class="form-control" placeholder="Nome">
-                </div>
-
-                <!-- Coluna 2 - Formulário de Email -->
-                <div class="col-md-4 form-group">
-                    <input type="email" class="form-control" placeholder="Email">
-                </div>
-
-                <!-- Coluna 3 - Botão Enviar -->
-                <div class="col-md-4 form-group-button">
-                    <button type="submit" class="btn btn-dark">Enviar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conteúdo Recursivo 3 - Rodapé -->
-
-        <footer>
-            <div class="container7">
-                <!-- Linha com 2 colunas no conteiner 7 -->
+        <div class="container">
+            <div class="content-recursive">
                 <div class="row">
-                    <!-- Coluna 1 com largura 3 no conteiner 7 -->
-                    <div class="col-md-3">
-                        <!-- Logomarca -->
-                        <div class="logo-container7">
-                            <img src="./img/Rhapsody_Dragão.jpg" alt="Logomarca">
-                        </div>
+                    <!-- Coluna 1 - Formulário de Nome -->
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="site-newsletter__input form-control" placeholder="Nome">
                     </div>
-                    <!-- Coluna 2 com largura 9 no conteiner 7 -->
-                    <div class="col-md-9">
-                        <!-- Texto de direitos autorais -->
-                        <p class="copyright-text">© Seus Direitos Autorais 2023</p>
+                    <!-- Coluna 2 - Formulário de Email -->
+                    <div class="col-md-4 form-group">
+                        <input type="email" class="site-newsletter__input form-control" placeholder="Email">
+                    </div>
+                    <!-- Coluna 3 - Botão Enviar -->
+                    <div class="col-md-4 form-group-button">
+                        <input type="button" class="site-newsletter__button btn btn-success" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-recursive m-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Links no Rodapé -->
+                    <a class="socialobj" href="http://www.github.com"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="3em" viewBox="0 0 496 512">
+                            <path
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg></a>
+                    <a class="socialobj" href="http://linkedin.com"><svg xmlns="http://www.w3.org/2000/svg" height="3em"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg></a>
+                    <a class="socialobj" href="http://www.youtube.com"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="3em" viewBox="0 0 576 512">
+                            <path
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                        </svg></a>
+                    <a class="socialobj" href="http://instagram.com"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="3em" viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg></a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloco2 content-recursive">
+        <h2 class="titulo2">TUDO QUE VOCE PRECISA</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <a class="obj_center"><svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 600 512">
+                            <path
+                                d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8c12.3-2.5 24.1-6.4 35.1-11.5c-2.1-10.8-3.1-21.9-3.1-33.3c0-80.3 53.8-148 127.3-169.2c.5-2.2 .7-4.5 .7-6.8c0-17.7-14.3-32-32-32H32zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm47.9-225c4.3 3.7 5.4 9.9 2.6 14.9L452.4 356H488c5.2 0 9.8 3.3 11.4 8.2s-.1 10.3-4.2 13.4l-96 72c-4.5 3.4-10.8 3.2-15.1-.6s-5.4-9.9-2.6-14.9L411.6 380H376c-5.2 0-9.8-3.3-11.4-8.2s.1-10.3 4.2-13.4l96-72c4.5-3.4 10.8-3.2 15.1 .6z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <p class="titulo3">Instalação Rapida</p>
+                    <p>Nossa solução apresenta uma instalação simplificada, sem a necessidade de sensores invasivos,
+                        garantindo sua comodidade e tranquilidade.</p>
+                </div>
+                <div class="col-md-1">
+                    <a class="obj_center"><svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 600 512">
+                            <path
+                                d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <p class="titulo3">Controle Completo</p>
+                    <p> Acesse as informações sobre o seu consumo de energia de qualquer lugar, a qualquer momento.
+                        Monitore seu consumo remotamente.</p>
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <a class="obj_center"><svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 600 512">
+                            <path
+                                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64H64c123.7 0 224 100.3 224 224v32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <p class="titulo3">Economia Inteligente</p>
+                    <p> Você economiza de forma inteligente, tomando decisões informadas para reduzir seus gastos e
+                        contribuir para um ambiente mais sustentável.</p>
+                </div>
+                <div class="col-md-1">
+                    <a class="obj_center"><svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 600 512">
+                            <path
+                                d="M320 96H192L144.6 24.9C137.5 14.2 145.1 0 157.9 0H354.1c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128H320c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96H96c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4l0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20v14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V424c0 11 9 20 20 20s20-9 20-20V410.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l0 0-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V216z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <p class="titulo3">Sem Surpresa</p>
+                    <p> Tenha acesso a detalhes claros e compreensíveis sobre sua conta de energia, permitindo que
+                        você planeje suas finanças com precisão.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bloco3">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h2 class="subtitulo2">Sobre</h2>
+                <p class="p1">A Energy Box é o resultado de uma colaboração apaixonada entre jovens inovadores da
+                    Faculdade
+                    Estácio e a orientação experiente do Professor Miqueias. Nascida da determinação de fazer a
+                    diferença,
+                    essa equipe dinâmica criou soluções de gestão de energia inteligentes e acessíveis.</p>
+                <p class="p1">Guiados pelo compromisso com a inovação e sustentabilidade, eles desenvolveram produtos
+                    que
+                    não apenas economizam dinheiro para as pessoas, mas também promovem um futuro energético mais verde.
+                    O
+                    apoio do Professor Miqueias impulsionou essa jornada, transformando sonhos em realidade.</p>
+                <p class="p1">Ao escolher a Energy Box, você não apenas investe em tecnologia; você investe em um
+                    movimento.
+                    Um movimento liderado por jovens visionários que acreditam no poder da energia sustentável para
+                    transformar vidas. Junte-se a nós e seja parte da revolução energética. Sinta o poder da mudança,
+                    sinta
+                    a energia do futuro.</p>
+            </div>
+            <div class="col-md-6 img_sobre ">
+                <img height="100%" width="100%" src="https://i.imgur.com/HOK6Xao.png" fetchpriority="high">
+            </div>
+        </div>
+    </div>
+    <div class="container bloco3">
+        <div class="row">
+            <div class="col-md-6 img_sobre ">
+                <video controls class="video">
+                    <source src="./img/Video_EnergyBox_2.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="col-md-6">
+                <h2 class="subtitulo2">Nosso Trabalho</h2>
+                <ul class="p2">
+                    <li>Colaboração entre jovens inovadores e orientação experiente.</li>
+                    <li>Soluções de gestão de energia inteligentes e acessíveis.</li>
+                    <li>Produtos que economizam dinheiro e promovem um futuro energético verde.</li>
+                    <li>Liderança em energia sustentável e transformação de vidas.</li>
+                    <li>Participação na revolução energética global.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="bloco4 ">
+        <div class="container">
+        <div class="container5">
+            <!-- Título -->
+            <h1 class="titulo2">O que dizem sobre nós</h1>
+            <!-- Texto -->
+            <p class="p2">"Na Energy Box, estamos comprometidos em moldar um futuro mais verde. Nossa equipe apaixonada
+                de inovadores e o apoio experiente do Professor Miqueias nos impulsionam a criar soluções de gestão de
+                energia acessíveis e inteligentes. Economizamos dinheiro, promovemos sustentabilidade e lideramos a
+                revolução energética global. Junte-se a nós para sentir o poder da mudança, sinta a energia do futuro."
+            </p>
+            <!-- Título e Subtítulo -->
+            <div class="subtitulo3">Trabalho - Desenvolvimento Web</div>
+            <div class="subtitulo3">Equipe: Íkaro Viana - Raimundo Lucas - G-peto</div>
+            <!-- Imagens lado a lado -->
+            <div class="image-container">
+                <img src="./img/Avatar-1.png" alt="Imagem 1">
+                <img src="./img/Avatar-4.jpg" alt="Imagem 2">
+                <img src="./img/Avatar-5.jpg" alt="Imagem 3">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bloco1">
+        <div class="container">
+            <h1 class="titulo2">Envie Seu contato</h1>
+            <div class="content-recursive">
+                <div class="row">
+                    <!-- Coluna 1 - Formulário de Nome -->
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="site-newsletter__input form-control" placeholder="Nome">
+                    </div>
+                    <!-- Coluna 2 - Formulário de Email -->
+                    <div class="col-md-4 form-group">
+                        <input type="email" class="site-newsletter__input form-control" placeholder="Email">
+                    </div>
+                    <!-- Coluna 3 - Botão Enviar -->
+                    <div class="col-md-4 form-group-button">
+                        <input type="button" class="site-newsletter__button btn btn-success" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bloco5">
+        <footer class="container">
+            <div class="content-recursive">
+                <div class="row">
+                    <!-- Coluna 1 - Formulário de Nome -->
+                    <div class="col-md-6">
+                        <img height="35px" width="auto" src="https://i.imgur.com/HOK6Xao.png" fetchpriority="high">
+                    </div>
+                    <!-- Coluna 2 - Formulário de Email -->
+                    <div class="col-md-6">
+                        <p class="p3">© Energy Box LTDA 2023</p>
                     </div>
                 </div>
             </div>
         </footer>
-       
     </div>
-
-   
 </body>
+
 </html>

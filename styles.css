@@ -1,0 +1,527 @@
+
+.img_sobre img {
+    max-width: 100%;
+    margin-top: 100px;
+    height: auto;
+    /* Mantém a proporção original da imagem */
+}
+
+.video {
+    text-align: auto;
+    max-width: 100%;
+    display: flex;
+    margin-top: 40px;
+    padding: auto;
+}
+
+.p1 {
+    text-align: justify;
+}
+
+.p2 {
+    text-align: left;
+}
+
+.p3 {
+    text-align: right;
+    color: #f2f2f2;
+}
+
+.bloco1 {
+    background: linear-gradient(to bottom, #000000, #ffffff);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.bloco5 {
+    background: #000000;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.bloco4 {
+    background: linear-gradient(to bottom, #ffffff, #000000);
+    font-family: Arial, sans-serif;
+    padding: px;
+    text-align: center;
+}
+
+.bloco3 {
+    background: rgb(219, 219, 219);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.titulo1 {
+    font-size: 50px;
+    color: rgb(21, 83, 120);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo1 {
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #000000;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.subtitulo2 {
+    font-size: 30px;
+    color: rgb(71, 70, 70);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitulo3 {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #ffb502;
+    text-align: center;
+    padding: 30px;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.934));
+}
+
+.socialobj {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    fill: #4e4e4e;
+}
+
+.socialobj:hover svg path {
+    fill: #ff8c00;
+}
+
+.obj_center {
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+    fill: #ff9a02;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.881));
+
+}
+
+.titulo3 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(71, 70, 70);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+.bloco2 {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.titulo2 {
+    font-family: sans-serif;
+    font-size: 50px;
+    color: #ff9a02;
+    font-weight: bold;
+    margin-bottom: 70px;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.934));
+    text-align: center;
+}
+
+
+/* Estilo para a imagem de logomarca */
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* Estilo para o título e subtitulo */
+
+
+
+
+/* Estilo para o formulário de cadastro horizontal */
+.form-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 1rem
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+/* Estilo para os campos de formulário */
+.form-control {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão "Enviar" */
+.btn-dark {
+    background-color: #333;
+    color: #f2f2f2;
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Estilo para alinhar o botão "Enviar" aos campos do formulário */
+.form-group-button {
+    flex-basis: calc(33.33% - 10px);
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Estilo para os links no rodapé */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.footer-links li {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilo para o conteiner 2 */
+.container2 {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o título do conteiner 2 */
+.container2 .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para as linhas do conteiner 2 */
+.row-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilo para cada item do conteiner 2 */
+.item-container2 {
+    flex-basis: calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+/* Estilo para o ícone do conteiner 2 */
+.icon-container2 {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Estilo para o título e subtitulo do conteiner 2 */
+.text-container2 {
+    text-align: left;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para o conteiner 3 */
+.container3 {
+    background-color: #d6d5d5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para a coluna da esquerda do conteiner 3 */
+.container3 .column-left {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+/* Estilo para o título da coluna da esquerda */
+.container3 .column-left .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 30px;
+}
+
+/* Estilo para o texto da coluna da esquerda */
+.container3 .column-left p {
+    font-size: 12px;
+    padding: 0 30px;
+}
+
+/* Estilo para a coluna da direita do conteiner 3 */
+.container3 .column-right {
+    flex-basis: 50%;
+}
+
+/* Estilo para a imagem da coluna da direita */
+.container3 .column-right img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para o conteiner 4 */
+.container4 {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para a coluna da esquerda do conteiner 4 */
+.container4 .column-left {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+/* Estilo para o vídeo da coluna da esquerda */
+.container4 .column-left video {
+    width: 100%;
+}
+
+/* Estilo para a coluna da direita do conteiner 4 */
+.container4 .column-right {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+/* Estilo para o título da coluna da direita */
+.container4 .column-right .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o texto da coluna da direita */
+.container4 .column-right p {
+    font-size: 12px;
+    padding: 0 30px;
+    text-align: left;
+}
+
+/* Estilo para o conteiner 5 */
+.container5 {
+    /* Fontes em cinza escuro */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o título h1 */
+.container5 h1 {
+    /* Tamanho do título */
+    font-weight: bold;
+}
+
+/* Estilo para o texto */
+.container5 p {
+    font-size: 20px;
+    /* Tamanho do texto */
+}
+
+/* Estilo para o título e subtitulo centralizados */
+.container5 .sub-title {
+    font-size: 24px;
+    /* Tamanho do subtítulo */
+    font-weight: bold;
+}
+
+/* Estilo para as imagens lado a lado */
+.container5 .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container5 .image-container img {
+    width: 80px;
+    /* Tamanho das imagens */
+    height: 80px;
+    /* Tamanho das imagens */
+    margin: 0 20px;
+    /* Distância entre as imagens */
+    border-radius: 50%;
+    /* Imagens arredondadas */
+}
+
+/* Estilo para o conteiner 6 */
+.container1 {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para a imagem de logomarca */
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Estilo para o título e subtitulo */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário de cadastro horizontal */
+.form-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    flex-basis: calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+/* Estilo para os campos de formulário */
+.form-control {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão "Enviar" */
+.btn-dark {
+    background-color: #333;
+    color: #f2f2f2;
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Estilo para alinhar o botão "Enviar" aos campos do formulário */
+.form-group-button {
+    display: flex;
+    border-radius: 100px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Estilo para os links no rodapé */
+.footer {
+    list-style: none;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+/* Estilo para o conteiner 7 */
+.container7 {
+    background-color: #d6d5d5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para a imagem de logomarca no conteiner 7 */
+.logo-container7 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.logo-container7 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Estilo para o texto de direitos autorais no conteiner 7 */
+.copyright-text {
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 1rem
+}
+
+.site-newsletter__input {
+    margin: 5px
+}
+
+.site-newsletter__button {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #333;
+    width: 100%;
+    margin: 5px
+}
+
+.site-newsletter__button:hover {
+    background-color: #ff8e01;
+    color: #000000;
+    font-weight: bolder;
+    border-color: #333;
+    width: 100%;
+    margin: 5px
+        /* Outras propriedades de estilo que você deseja aplicar quando o mouse está sobre o botão */
+}
